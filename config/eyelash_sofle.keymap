@@ -52,6 +52,21 @@
             #sensor-binding-cells = <0>;
             tap-ms = <0>;
         };
+
+        grave_cmd: grave_cmd {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&kp TAB>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        grave_alt: grave_alt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&grave_cmd>, <&kp LG(TAB)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     combos {
@@ -85,12 +100,12 @@
 
         layer0 {
             bindings = <
-// LA0        LA1        LA2           LA3           LA4     LA5          | MA |           RA0        RA1        RA2        RA3              RA4         RA5
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
+// LA0          LA1        LA2           LA3           LA4     LA5          | MA |           RA0        RA1        RA2        RA3              RA4         RA5
+&grave_alt  &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
 // LB0        LB1        LB2           LB3           LB4     LB5          | MB |           RB0        RB1        RB2        RB3              RB4         RB5
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
 // LC0        LC1        LC2           LC3           LC4     LC5          | MC |           RC0        RC1        RC2        RC3              RC4         RC5
-&kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
+&kp CAPS    &kp A      &kp S         &kp D         &lt 1 F  &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 // LD0        LD1        LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
 &kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
 // LE0        LE1        LE2           LE3           LE4     LE5          | ME |           RE0        RE1        RE2        RE3              RE4
@@ -98,42 +113,42 @@
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
-            display-name = "LAYER0";
+            display-name = "main";
         };
 
         layer_1 {
             bindings = <
-// LA0        LA1              LA2             LA3              LA4              LA5                | MA |            RA0              RA1              RA2         RA3        RA4               RA5
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-// LB0        LB1              LB2             LB3              LB4              LB5                | MB |            RB0              RB1              RB2         RB3        RB4               RB5
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-// LC0        LC1              LC2             LC3              LC4              LC5                | MC |            RC0              RC1              RC2         RC3        RC4               RC5
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-// LD0        LD1              LD2             LD3              LD4              LD5                | MD |            RD0              RD1              RD2         RD3        RD4               RD5
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-// LE0        LE1              LE2             LE3              LE4              LE5                | ME |            RE0              RE1              RE2         RE3        RE4
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+// LA0    LA1           LA2     LA3     LA4     LA5     | MA |   RA0        RA1     RA2     RA3     RA4        RA5
+&none   &bootloader   &none   &none   &none   &none     &none   &none      &none   &none   &none   &none      &none
+// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0        RB1     RB2     RB3     RB4        RB5
+&none   &none   &none   &none   &none   &none     &none   &kp LG(C)  &none   &none   &none   &kp LG(V)  &none
+// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0        RC1      RC2     RC3     RC4     RC5
+&none   &none   &none   &none   &none   &none     &none   &kp LEFT   &kp DOWN &kp UP  &kp RIGHT &none  &none
+// LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
+&none   &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none   &none
+// LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
+&none   &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
-            display-name = "LAYER1";
+            display-name = "vimnav";
         };
 
         layer_2 {
             bindings = <
-// LA0       LA1           LA2             LA3           LA4           LA5             | MA |            RA0     RA1     RA2         RA3        RA4          RA5
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-// LB0       LB1           LB2             LB3           LB4           LB5             | MB |            RB0     RB1     RB2         RB3        RB4          RB5
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-// LC0       LC1           LC2             LC3           LC4           LC5             | MC |            RC0     RC1     RC2         RC3        RC4          RC5
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-// LD0       LD1           LD2             LD3           LD4           LD5             | MD |            RD0     RD1     RD2         RD3        RD4          RD5
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-// LE0       LE1           LE2             LE3           LE4           LE5             | ME |            RE0     RE1     RE2         RE3        RE4
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+// LA0    LA1     LA2     LA3     LA4     LA5     | MA |   RA0          RA1        RA2        RA3     RA4     RA5
+&none   &none   &none   &none   &none   &none     &none   &none        &none      &none      &none   &none   &none
+// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0          RB1        RB2        RB3          RB4          RB5
+&none   &none   &none   &none   &none   &none     &none   &kp CARET    &kp LPAR   &kp RPAR   &kp MINUS    &kp EQUAL    &none
+// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0          RC1        RC2        RC3     RC4     RC5
+&none   &none   &none   &none   &none   &none     &none   &kp UNDER    &kp LBRC   &kp RBRC   &none   &none   &none
+// LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0          RD1        RD2        RD3     RD4     RD5
+&none   &none   &none   &none   &none   &none     &none   &kp AMPS     &kp LBKT   &kp RBKT   &none   &none   &none
+// LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
+&none   &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
             >;
 
-            display-name = "LAYER2";
+            display-name = "symbols";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
@@ -151,7 +166,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            display-name = "LAYER3";
+            display-name = "wimmngt";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
