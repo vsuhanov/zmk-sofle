@@ -18,7 +18,10 @@ wait_and_flash() {
     echo "==> Flashing $(basename "$uf2")..."
     cp "$uf2" "$NICENANO_VOLUME/"
     sync
-    echo "==> Done."
+    echo "==> Done. Waiting for drive to unmount..."
+    while [ -d "$NICENANO_VOLUME" ]; do
+        sleep 1
+    done
 }
 
 if [ "$1" = "--from-file" ]; then
