@@ -60,10 +60,8 @@ if [ "$SKIP_PUSH" = true ]; then
         sleep 2
     done
 else
-    if ! git -C "$ROOT" diff --quiet || ! git -C "$ROOT" diff --cached --quiet; then
-        echo "Error: uncommitted changes. Commit or stash them first."
-        exit 1
-    fi
+    git -C "$ROOT" add -A
+    git -C "$ROOT" diff --cached --quiet || git -C "$ROOT" commit -m "Update keymap"
 
     echo "==> Pushing to remote..."
     git -C "$ROOT" push
