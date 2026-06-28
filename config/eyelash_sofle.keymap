@@ -92,6 +92,15 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+
+        space_mod: space_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <125>;
+        };
     };
 
     combos {
@@ -152,7 +161,7 @@
 // LD0     LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none   &trans
 // LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
-&none   &trans   &trans   &trans   &none   &kp LG(SPACE)     &none   &kp GLOBE   &none   &trans   &trans   &none
+&none   &trans   &trans   &trans   &none   &kp LG(SPACE)     &none   &kp LA(SPACE)   &none   &trans   &trans   &none
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
