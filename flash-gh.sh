@@ -64,18 +64,31 @@ else
     git -C "$ROOT" diff --cached --quiet || git -C "$ROOT" commit -m "Update keymap"
     git -C "$ROOT" pull --rebase
 
-    echo "==> Pushing to remote..."
-    git -C "$ROOT" push
-
     COMMIT_SHA=$(git -C "$ROOT" rev-parse HEAD)
+
+    if git -C "$ROOT" status -sb | grep -q "ahead"; then
+        echo "==> Pushing to remote..."
+        git -C "$ROOT" push
+    fi
 
     echo "==> Waiting for Actions run to start..."
     RUN_ID=""
-    for i in $(seq 1 30); do
+    for i in $(seq 1 15); do
         RUN_ID=$(gh run list --repo "$REPO" --commit "$COMMIT_SHA" --workflow "build.yml" --json databaseId --jq '.[0].databaseId' 2>/dev/null || true)
         [ -n "$RUN_ID" ] && [ "$RUN_ID" != "null" ] && break
         sleep 2
     done
+
+    if [ -z "$RUN_ID" ] || [ "$RUN_ID" = "null" ]; then
+        echo "==> No run found for commit, triggering workflow explicitly..."
+        TRIGGERED_AT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+        gh workflow run build.yml --repo "$REPO" --ref "$BRANCH"
+        for i in $(seq 1 30); do
+            RUN_ID=$(gh run list --repo "$REPO" --branch "$BRANCH" --workflow "build.yml" --json databaseId,createdAt --jq "[.[] | select(.createdAt >= \"$TRIGGERED_AT\")] | .[0].databaseId" 2>/dev/null || true)
+            [ -n "$RUN_ID" ] && [ "$RUN_ID" != "null" ] && break
+            sleep 2
+        done
+    fi
 fi
 
 if [ -z "$RUN_ID" ] || [ "$RUN_ID" = "null" ]; then
