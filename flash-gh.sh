@@ -62,6 +62,7 @@ if [ "$SKIP_PUSH" = true ]; then
 else
     git -C "$ROOT" add -A
     git -C "$ROOT" diff --cached --quiet || git -C "$ROOT" commit -m "Update keymap"
+    git -C "$ROOT" pull --rebase
 
     echo "==> Pushing to remote..."
     git -C "$ROOT" push
