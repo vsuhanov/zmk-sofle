@@ -50,9 +50,11 @@ wait_and_flash() {
     while [ ! -d "$NICENANO_VOLUME" ]; do
         sleep 1
     done
+    sleep 1
 
     echo "==> Drive found, flashing..."
     cp "$uf2" "$NICENANO_VOLUME/"
+    sync
     echo "==> Done."
 }
 
