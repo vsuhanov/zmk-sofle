@@ -101,6 +101,20 @@
             flavor = "tap-preferred";
             quick-tap-ms = <125>;
         };
+
+        td_lshft: td_lshft {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHFT>, <&caps_word>;
+        };
+
+        td_rshft: td_rshft {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LSHFT ENTER>, <&caps_word>;
+        };
     };
 
     combos {
@@ -137,11 +151,11 @@
 // LA0          LA1        LA2           LA3           LA4     LA5          | MA |           RA0        RA1        RA2        RA3              RA4         RA5
 &grave_ctrl  &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
 // LB0        LB1        LB2           LB3           LB4     LB5          | MB |           RB0        RB1        RB2        RB3              RB4         RB5
-&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
+&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp LBKT
 // LC0        LC1        LC2           LC3           LC4     LC5          | MC |           RC0        RC1        RC2        RC3              RC4         RC5
 &lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 // LD0        LD1        LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
-&kp LSHFT   &mt LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
+&td_lshft   &mt LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &td_rshft
 // LE0        LE1        LE2           LE3           LE4     LE5          | ME |           RE0        RE1        RE2           RE3           RE4
 &kp C_MUTE  &sk LCTRL  &mt LALT PLUS  &mt LGUI MINUS  &mo 1   &space_mod LGUI SPACE    &kp ENTER        &kp SPACE  &kp SPACE  &kp RGUI      &kp RALT      &mo 4
             >;
@@ -155,7 +169,7 @@
 // LA0    LA1           LA2     LA3     LA4     LA5     | MA |   RA0        RA1     RA2     RA3     RA4        RA5
 &none   &bootloader   &none   &none   &none   &none     &none   &none      &none   &none   &none   &none      &trans
 // LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0        RB1     RB2     RB3     RB4        RB5
-&none   &none   &none   &none   &none   &none     &none   &kp LG(C)  &none   &kp HOME   &none   &kp LG(V)  &none
+&none   &none   &none   &none   &none   &none     &none   &kp LG(C)  &kp LG(Z)   &kp HOME   &none   &kp LG(V)  &kp RBKT
 // LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0        RC1      RC2     RC3     RC4     RC5
 &trans   &kp END   &kp LA(SPACE)   &kp DEL   &none   &none     &none   &kp LEFT   &kp DOWN &kp UP  &kp RIGHT &none  &none
 // LD0     LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
@@ -173,9 +187,9 @@
 // LA0    LA1     LA2     LA3     LA4     LA5     | MA |   RA0          RA1        RA2        RA3     RA4     RA5
 &none   &none   &none   &none   &none   &none     &none   &none        &none      &none      &none   &none   &trans
 // LB0    LB1           LB2     LB3     LB4     LB5     | MB |   RB0          RB1        RB2        RB3     RB4     RB5
-&none   &none         &none   &none   &none   &none     &none   &kp CARET    &kp LPAR   &kp RPAR   &kp MINUS   &kp EQUAL   &none
+&none   &none         &none   &none   &none   &none     &none   &kp CARET    &kp LPAR   &kp RPAR   &kp MINUS   &kp EQUAL   &kp RBKT
 // LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0          RC1        RC2        RC3     RC4     RC5
-&trans   &none   &none   &none   &none   &none     &none   &none        &kp LBRC   &kp RBRC   &none   &none   &none
+&trans   &none   &none   &none   &none   &none     &none   &none        &kp LBRC   &kp RBRC   &none   &none   &kp BSLH
 // LD0     LD1     LD2     LD3     LD4     LD5     | MD |   RD0          RD1        RD2        RD3     RD4     RD5
 &trans  &none   &none   &none   &none   &none     &none   &none        &kp LBKT   &kp RBKT   &none   &none   &trans
 // LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
