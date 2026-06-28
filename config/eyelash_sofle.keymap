@@ -140,7 +140,7 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
             display-name = "main";
         };
-d
+
         layer_1 {
             bindings = <
 // LA0    LA1           LA2     LA3     LA4     LA5     | MA |   RA0        RA1     RA2     RA3     RA4        RA5
