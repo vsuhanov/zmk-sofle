@@ -68,11 +68,29 @@
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
-        td_shift: td_shift {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+        shift_ctrl: shift_ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&sk>;
             tapping-term-ms = <200>;
-            bindings = <&sk LSHFT>, <&caps_word>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <125>;
+        };
+
+        lc0_morph: lc0_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mt LS(LA(LC(LGUI))) ESC>, <&kp LSHFT>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        grave_ctrl: grave_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&grave_alt>, <&kp TAB>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
@@ -108,15 +126,15 @@
         layer0 {
             bindings = <
 // LA0          LA1        LA2           LA3           LA4     LA5          | MA |           RA0        RA1        RA2        RA3              RA4         RA5
-&grave_alt  &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
+&grave_ctrl  &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
 // LB0        LB1        LB2           LB3           LB4     LB5          | MB |           RB0        RB1        RB2        RB3              RB4         RB5
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
 // LC0        LC1        LC2           LC3           LC4     LC5          | MC |           RC0        RC1        RC2        RC3              RC4         RC5
-&kp CAPS    &kp A      &kp S         &lt 2 D       &lt 1 F  &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
+&lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 // LD0        LD1        LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
-&td_shift   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &td_shift
+&shift_ctrl LCTRL LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
 // LE0        LE1        LE2           LE3           LE4     LE5          | ME |           RE0        RE1        RE2           RE3           RE4
-&kp C_MUTE  &sk LCTRL  &mt LALT PLUS  &mt LGUI MINUS  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &kp RGUI      &kp RALT      &mo 4
+&kp C_MUTE  &sk LCTRL  &mt LALT PLUS  &mt LGUI MINUS  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp SPACE  &kp RGUI      &kp RALT      &mo 4
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -146,7 +164,7 @@
 // LA0    LA1     LA2     LA3     LA4     LA5     | MA |   RA0          RA1        RA2        RA3     RA4     RA5
 &none   &none   &none   &none   &none   &none     &none   &none        &none      &none      &none   &none   &none
 // LB0    LB1           LB2     LB3     LB4     LB5     | MB |   RB0          RB1        RB2        RB3     RB4     RB5
-&none   &none         &none   &none   &none   &none     &none   &kp CARET    &kp LPAR   &kp RPAR   &none   &none   &none
+&none   &none         &none   &none   &none   &none     &none   &kp CARET    &kp LPAR   &kp RPAR   &kp MINUS   &kp EQUAL   &none
 // LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0          RC1        RC2        RC3     RC4     RC5
 &none   &none   &none   &none   &none   &none     &none   &none        &kp LBRC   &kp RBRC   &none   &none   &none
 // LD0     LD1     LD2     LD3     LD4     LD5     | MD |   RD0          RD1        RD2        RD3     RD4     RD5
