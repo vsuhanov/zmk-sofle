@@ -153,7 +153,7 @@
 // LB0        LB1        LB2           LB3           LB4     LB5          | MB |           RB0        RB1        RB2        RB3              RB4         RB5
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp LBKT
 // LC0        LC1        LC2           LC3           LC4     LC5          | MC |           RC0        RC1        RC2        RC3              RC4         RC5
-&lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
+&lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &kp G        &kp LEFT_ARROW   &kp H      &lt 1 J      &kp K      &kp L            &kp SEMI    &kp APOS
 // LD0        LD1        LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
 &td_lshft   &mt LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
 // LE0        LE1        LE2           LE3           LE4     LE5          | ME |           RE0        RE1        RE2           RE3           RE4
@@ -169,11 +169,11 @@
 // LA0    LA1           LA2     LA3     LA4     LA5     | MA |   RA0        RA1     RA2     RA3     RA4        RA5
 &none   &bootloader   &none   &none   &none   &none     &none   &none      &none   &none   &none   &none      &kp LA(BACKSPACE)
 // LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0        RB1     RB2     RB3     RB4        RB5
-&none   &none   &none   &kp END   &none   &none     &none   &kp LG(C)  &kp LG(Z)   &kp HOME   &none   &kp LG(V)  &kp RBKT
+&none   &none   &kp LA(RIGHT)   &kp END   &none   &none     &none   &kp LG(C)  &kp LG(Z)   &kp HOME   &none   &kp LG(V)  &kp RBKT
 // LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0        RC1      RC2     RC3     RC4     RC5
 &trans   &kp HOME   &kp LA(SPACE)   &kp DEL   &none   &none     &none   &kp LEFT   &kp DOWN &kp UP  &kp RIGHT &none  &none
 // LD0     LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
-&trans  &none   &none   &none   &none   &none     &none   &none   &none   &none   &none   &none   &trans
+&trans  &none   &none   &none   &none   &kp LA(LEFT)     &none   &none   &none   &none   &none   &none   &trans
 // LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
 &none   &trans   &trans   &trans   &none   &kp LG(SPACE)     &none   &kp LA(SPACE)   &none   &trans   &trans   &none
             >;
