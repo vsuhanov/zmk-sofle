@@ -67,17 +67,17 @@ layers:
   - LAYER4
   vimnav:
   - '&app_sw_enter'
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
+  - {t: '!', s: F1}
+  - {t: '@', s: F2}
+  - {t: '#', s: F3}
+  - {t: $, s: F4}
+  - {t: '%', s: F5}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
+  - {t: ^, s: F6}
+  - {t: '&', s: F7}
+  - {t: '*', s: F8}
+  - {t: (, s: F9}
+  - {t: ), s: F10}
   - {t: 'Alt+$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -89,8 +89,8 @@ layers:
   - {t: C, h: '$$mdi:apple-keyboard-command$$'}
   - {t: Z, h: '$$mdi:apple-keyboard-command$$'}
   - HOME
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: V, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:minus-circle-outline$$', s: F11}
+  - {t: V, h: '$$mdi:apple-keyboard-command$$', s: F12}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - HOME
@@ -132,17 +132,17 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   symbols:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
+  - {t: '!', s: F1}
+  - {t: '@', s: F2}
+  - {t: '#', s: F3}
+  - {t: $, s: F4}
+  - {t: '%', s: F5}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
+  - {t: ^, s: F6}
+  - {t: '&', s: F7}
+  - {t: '*', s: F8}
+  - {t: (, s: F9}
+  - {t: ), s: F10}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -154,8 +154,8 @@ layers:
   - ^
   - (
   - )
-  - {t: '-', s: _}
-  - {t: '=', s: +}
+  - {t: '-', s: F11}
+  - {t: '=', s: F12}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
