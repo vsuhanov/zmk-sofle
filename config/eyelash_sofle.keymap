@@ -115,6 +115,41 @@
             tapping-term-ms = <200>;
             bindings = <&mt LSHFT ENTER>, <&caps_word>;
         };
+
+        td_j: td_j {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt 1 J>, <&mo 1>;
+        };
+
+        wm_left: wm_left {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(LG(LEFT))))>, <&kp LA(LC(LG(LEFT)))>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        wm_down: wm_down {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(LG(DOWN))))>, <&kp LA(LC(LG(DOWN)))>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        wm_up: wm_up {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(LG(UP))))>, <&kp LA(LC(LG(UP)))>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        wm_right: wm_right {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(LG(RIGHT))))>, <&kp LA(LC(LG(RIGHT)))>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     combos {
@@ -153,7 +188,7 @@
 // LB0        LB1        LB2           LB3           LB4     LB5          | MB |           RB0        RB1        RB2        RB3              RB4         RB5
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp LBKT
 // LC0        LC1        LC2           LC3           LC4     LC5          | MC |           RC0        RC1        RC2        RC3              RC4         RC5
-&lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &kp G        &kp LEFT_ARROW   &kp H      &lt 1 J      &kp K      &kp L            &kp SEMI    &kp APOS
+&lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &lt 3 G        &kp LEFT_ARROW   &kp H      &td_j      &kp K      &kp L            &kp SEMI    &kp APOS
 // LD0        LD1        LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
 &td_lshft   &mt LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
 // LE0        LE1        LE2           LE3           LE4     LE5          | ME |           RE0        RE1        RE2           RE3           RE4
@@ -167,7 +202,7 @@
         layer_1 {
             bindings = <
 // LA0    LA1           LA2     LA3     LA4     LA5     | MA |   RA0        RA1     RA2     RA3     RA4        RA5
-&none   &bootloader   &none   &none   &none   &none     &none   &none      &none   &none   &none   &none      &kp LA(BACKSPACE)
+&none   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT     &none   &kp CARET   &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR   &kp LA(BACKSPACE)
 // LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0        RB1     RB2     RB3     RB4        RB5
 &none   &none   &kp LA(RIGHT)   &kp END   &none   &none     &none   &kp LG(C)  &kp LG(Z)   &kp HOME   &none   &kp LG(V)  &kp RBKT
 // LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0        RC1      RC2     RC3     RC4     RC5
@@ -185,11 +220,11 @@
         layer_2 {
             bindings = <
 // LA0    LA1     LA2     LA3     LA4     LA5     | MA |   RA0          RA1        RA2        RA3     RA4     RA5
-&none   &none   &none   &none   &none   &none     &none   &none        &none      &none      &none   &none   &trans
+&none   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT     &none   &kp CARET   &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR   &trans
 // LB0    LB1           LB2     LB3     LB4     LB5     | MB |   RB0          RB1        RB2        RB3     RB4     RB5
 &none   &none         &none   &none   &none   &none     &none   &kp CARET    &kp LPAR   &kp RPAR   &kp MINUS   &kp EQUAL   &kp RBKT
 // LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0          RC1        RC2        RC3     RC4     RC5
-&trans   &none   &none   &none   &none   &none     &none   &kp UNDER        &kp LBRC   &kp RBRC   &none   &none   &kp BSLH
+&trans   &none   &none   &none   &none   &none     &none   &kp UNDER        &kp LBRC   &kp RBRC   &kp PLUS   &none   &kp BSLH
 // LD0     LD1     LD2     LD3     LD4     LD5     | MD |   RD0          RD1        RD2        RD3     RD4     RD5
 &trans  &none   &none   &none   &none   &none     &none   &kp AMPS        &kp LBKT   &kp RBKT   &none   &none   &trans
 // LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
@@ -206,15 +241,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0     RC1     RC2     RC3     RC4     RC5
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0       RC1       RC2     RC3        RC4     RC5
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &wm_left  &wm_down  &wm_up  &wm_right  &trans  &trans
 // LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            display-name = "wimmngt";
+            display-name = "winmgmt";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
