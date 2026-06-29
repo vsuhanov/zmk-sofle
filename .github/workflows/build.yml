@@ -70,6 +70,38 @@ jobs:
             cp -R config/* "${{ env.base_dir }}/config/"
           fi
 
+      - name: Generate secret macros
+        env:
+          SECRET_1: ${{ secrets.SECRET_1 }}
+          SECRET_2: ${{ secrets.SECRET_2 }}
+          SECRET_3: ${{ secrets.SECRET_3 }}
+        run: |
+          SCRIPT="${GITHUB_WORKSPACE}/boards/shields/eyelash_sofle/str_to_zmk.py"
+          B1=$(python3 "$SCRIPT" "$SECRET_1")
+          B2=$(python3 "$SCRIPT" "$SECRET_2")
+          B3=$(python3 "$SCRIPT" "$SECRET_3")
+          cat > "${{ env.base_dir }}/config/secret_macros.dtsi" <<DTSI
+          / {
+              macros {
+                  secret1: secret1 {
+                      compatible = "zmk,behavior-macro";
+                      #binding-cells = <0>;
+                      bindings = <$B1>;
+                  };
+                  secret2: secret2 {
+                      compatible = "zmk,behavior-macro";
+                      #binding-cells = <0>;
+                      bindings = <$B2>;
+                  };
+                  secret3: secret3 {
+                      compatible = "zmk,behavior-macro";
+                      #binding-cells = <0>;
+                      bindings = <$B3>;
+                  };
+              };
+          };
+          DTSI
+
       - name: Cache west modules
         uses: actions/cache@v4
         continue-on-error: true
