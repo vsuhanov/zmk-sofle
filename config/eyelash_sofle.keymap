@@ -151,6 +151,13 @@
             bindings = <&kp LS(LA(LC(LG(RIGHT))))>, <&kp LA(LC(LG(RIGHT)))>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+
+        appsw_cmd: appsw_cmd {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&app_sw_enter>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     combos {
@@ -173,9 +180,7 @@
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_tap>,
-                <&tog APP_SW>,
-                <&macro_tap>,
-                <&tog 1>;
+                <&tog APP_SW>;
         };
 
         app_sw_confirm: app_sw_confirm {
@@ -187,9 +192,7 @@
                 <&macro_tap>,
                 <&kp ENTER>,
                 <&macro_tap>,
-                <&tog APP_SW>,
-                <&macro_tap>,
-                <&tog 1>;
+                <&tog APP_SW>;
         };
 
         app_sw_cancel: app_sw_cancel {
@@ -201,9 +204,7 @@
                 <&macro_tap>,
                 <&kp ESC>,
                 <&macro_tap>,
-                <&tog APP_SW>,
-                <&macro_tap>,
-                <&tog 1>;
+                <&tog APP_SW>;
         };
 
         SHIFT_MCLK: SHIFT_MCLK {
@@ -228,7 +229,7 @@
         layer0 {
             bindings = <
 // LA0          LA1        LA2           LA3           LA4     LA5          | MA |           RA0        RA1        RA2        RA3              RA4         RA5
-&grave_ctrl  &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
+&appsw_cmd  &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
 // LB0        LB1        LB2           LB3           LB4     LB5          | MB |           RB0        RB1        RB2        RB3              RB4         RB5
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp LBKT
 // LC0        LC1        LC2           LC3           LC4     LC5          | MC |           RC0        RC1        RC2        RC3              RC4         RC5
@@ -321,8 +322,8 @@
 &kp TAB     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LC0              LC1     LC2     LC3     LC4     LC5     | MC |   RC0     RC1     RC2     RC3     RC4     RC5
-&app_sw_cancel  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LC0              LC1     LC2     LC3     LC4     LC5     | MC |   RC0        RC1        RC2      RC3        RC4     RC5
+&app_sw_cancel  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &trans  &trans
 // LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &app_sw_confirm
 // LE0    LE1     LE2     LE3               LE4     LE5               RE0               RE1     RE2     RE3     RE4     RE5
