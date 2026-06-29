@@ -155,11 +155,11 @@
 // LC0        LC1        LC2           LC3           LC4     LC5          | MC |           RC0        RC1        RC2        RC3              RC4         RC5
 &lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 // LD0        LD1        LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
-&td_lshft   &mt LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &td_rshft
+&td_lshft   &mt LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
 // LE0        LE1        LE2           LE3           LE4     LE5          | ME |           RE0        RE1        RE2           RE3           RE4
 &kp C_MUTE  &sk LCTRL  &mt LALT PLUS  &mt LGUI MINUS  &mo 1   &space_mod LGUI SPACE    &kp ENTER        &space_mod LALT SPACE  &space_mod LCTRL SPACE  &kp RGUI      &kp RALT      &mo 4
             >;
-
+afdddmy 
             sensor-bindings = <&rsr_vol &rsr_trans>;
             display-name = "main";
         };

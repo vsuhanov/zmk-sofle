@@ -124,7 +124,8 @@ echo "Which half do you want to flash?"
 echo "  1) Left"
 echo "  2) Right"
 echo "  3) Both (left first, then right)"
-read -rp "Choice [1/2/3]: " choice
+echo "  4) Both (right first, then left)"
+read -rp "Choice [1/2/3/4]: " choice
 
 case $choice in
     1) wait_and_flash "$LEFT_UF2" ;;
@@ -132,6 +133,10 @@ case $choice in
     3)
         wait_and_flash "$LEFT_UF2"
         wait_and_flash "$RIGHT_UF2"
+        ;;
+    4)
+        wait_and_flash "$RIGHT_UF2"
+        wait_and_flash "$LEFT_UF2"
         ;;
     *) echo "Invalid choice."; exit 1 ;;
 esac
