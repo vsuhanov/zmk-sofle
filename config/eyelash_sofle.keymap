@@ -11,6 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+#include "secret_macros.dtsi"
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -402,8 +403,8 @@
 &trans  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &bootloader
 // LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0     RC1     RC2     RC3     RC4     RC5
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LC0    LC1       LC2       LC3       LC4     LC5     | MC |   RC0     RC1     RC2     RC3     RC4     RC5
+&trans  &secret1  &secret2  &secret3  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
