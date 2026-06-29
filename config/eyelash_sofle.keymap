@@ -57,8 +57,9 @@
         grave_cmd: grave_cmd {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&app_sw_enter>;
+            bindings = <&kp GRAVE>, <&kp TAB>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         grave_alt: grave_alt {
@@ -168,7 +169,7 @@
             bindings =
                 <&macro_press>,
                 <&kp LGUI>,
-                <&macro_wait_time 50>,
+                <&macro_wait_time 80>,
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_tap>,
@@ -245,7 +246,7 @@
         layer_1 {
             bindings = <
 // LA0    LA1           LA2     LA3     LA4     LA5     | MA |   RA0        RA1     RA2     RA3     RA4        RA5
-&none   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT     &none   &kp CARET   &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR   &kp LA(BACKSPACE)
+&app_sw_enter   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT     &none   &kp CARET   &kp AMPS   &kp ASTRK   &kp LPAR   &kp RPAR   &kp LA(BACKSPACE)
 // LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0        RB1     RB2     RB3     RB4        RB5
 &none   &none   &kp LA(RIGHT)   &kp END   &none   &none     &none   &kp LG(C)  &kp LG(Z)   &kp HOME   &none   &kp LG(V)  &kp RBKT
 // LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0        RC1      RC2     RC3     RC4     RC5
@@ -280,8 +281,8 @@
 
         layer_3 {
             bindings = <
-// LA0    LA1           LA2     LA3     LA4     LA5     | MA |   RA0     RA1     RA2     RA3     RA4     RA5
-&trans  &bootloader   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LA0    LA1     LA2     LA3     LA4     LA5     | MA |   RA0     RA1     RA2     RA3     RA4     RA5
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0       RC1       RC2     RC3        RC4     RC5
