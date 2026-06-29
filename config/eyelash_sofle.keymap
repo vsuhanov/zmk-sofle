@@ -120,7 +120,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt 1 J>, <&mo 1>;
+            bindings = <&lt 1 J>, <&kp J>;
         };
 
         wm_left: wm_left {
