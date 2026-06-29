@@ -1,5 +1,6 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define APP_SW 5
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -56,9 +57,8 @@
         grave_cmd: grave_cmd {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&kp TAB>;
+            bindings = <&kp GRAVE>, <&app_sw_enter>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
-            keep-mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         grave_alt: grave_alt {
@@ -162,6 +162,48 @@
     };
 
     macros {
+        app_sw_enter: app_sw_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_tap>,
+                <&tog APP_SW>,
+                <&macro_tap>,
+                <&tog 1>;
+        };
+
+        app_sw_confirm: app_sw_confirm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_release>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_tap>,
+                <&tog APP_SW>,
+                <&macro_tap>,
+                <&tog 1>;
+        };
+
+        app_sw_cancel: app_sw_cancel {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_release>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp ESC>,
+                <&macro_tap>,
+                <&tog APP_SW>,
+                <&macro_tap>,
+                <&tog 1>;
+        };
+
         SHIFT_MCLK: SHIFT_MCLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -268,6 +310,24 @@
             >;
 
             display-name = "LAYER4";
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        layer_5 {
+            bindings = <
+// LA0        LA1     LA2     LA3     LA4     LA5     | MA |   RA0     RA1     RA2     RA3     RA4     RA5
+&kp TAB     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LC0              LC1     LC2     LC3     LC4     LC5     | MC |   RC0     RC1     RC2     RC3     RC4     RC5
+&app_sw_cancel  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &app_sw_confirm
+// LE0    LE1     LE2     LE3               LE4     LE5               RE0               RE1     RE2     RE3     RE4     RE5
+&trans  &trans  &trans  &app_sw_confirm  &trans  &app_sw_confirm    &app_sw_confirm  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            display-name = "appsw";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
     };
