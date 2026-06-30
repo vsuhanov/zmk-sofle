@@ -269,7 +269,9 @@
         browser_nav_combo {
             bindings = <&mo 6>;
             key-positions = <42 44>;
-            timeout-ms = <50>;
+            timeout-ms = <100>;
+            require-prior-idle-ms = <200>;
+            slow-release;
         };
     };
 
