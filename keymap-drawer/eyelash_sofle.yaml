@@ -456,7 +456,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   re2layer:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&app_sw_enter'
   - {t: Alt+1, s: Alt+!}
   - {t: Alt+2, s: Alt+@}
   - {t: Alt+3, s: Alt+#}
@@ -469,7 +469,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&app_sw_enter'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
