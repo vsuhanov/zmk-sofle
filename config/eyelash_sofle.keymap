@@ -479,10 +479,10 @@
 
         layer_7 {
             bindings = <
-// LA0    LA1           LA2           LA3           LA4           LA5           | MA |   RA0     RA1     RA2     RA3     RA4     RA5
-&trans  &kp LA(N1)    &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LB0    LB1     LB2     LB3     LB4     LB5                              | MB |   RB0     RB1                              RB2                              RB3                              RB4     RB5
-&trans  &trans  &trans  &trans  &trans  &kp LS(LA(LC(LG(T))))      &trans  &trans  &trans  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(O))))  &trans  &trans
+// LA0              LA1           LA2           LA3           LA4           LA5           | MA |   RA0     RA1     RA2     RA3     RA4     RA5
+&app_sw_enter  &kp LA(N1)    &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LB0              LB1     LB2     LB3     LB4     LB5                              | MB |   RB0     RB1                              RB2                              RB3                              RB4     RB5
+&app_sw_enter  &trans  &trans  &trans  &trans  &kp LS(LA(LC(LG(T))))      &trans  &trans  &trans  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(O))))  &trans  &trans
 // LC0              LC1           LC2           LC3           LC4           LC5           | MC |   RC0     RC1     RC2     RC3     RC4     RC5
 &app_sw_enter  &kp LA(N1)    &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
