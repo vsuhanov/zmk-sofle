@@ -249,6 +249,24 @@
             bindings = <&kp EQUAL>, <&kp F12>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+
+        lt_tp: lt_tp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <125>;
+        };
+
+        mt_tp: mt_tp {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <125>;
+        };
     };
 
     combos {
@@ -342,9 +360,9 @@
 // LC0        LC1        LC2           LC3           LC4     LC5          | MC |           RC0        RC1        RC2        RC3              RC4         RC5
 &lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &lt 3 G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 // LD0        LD1        LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
-&td_lshft   &mt LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
+&td_lshft   &mt_tp LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
 // LE0        LE1        LE2           LE3           LE4     LE5          | ME |           RE0       RE1        RE2           RE3           RE4
-&kp C_MUTE  &sk LCTRL  &mt LALT PLUS  &mt LGUI MINUS  &mo 1   &space_mod LGUI SPACE    &kp ENTER        &space_mod LALT SPACE  &space_mod LALT SPACE  &kp RGUI      &kp RALT      &mo 4
+&kp C_MUTE  &sk LCTRL  &mt LALT PLUS  &mt LGUI MINUS  &mo 1   &space_mod LGUI SPACE    &kp ENTER        &space_mod LALT SPACE  &space_mod LALT SPACE  &lt_tp 7 SPACE  &kp RALT      &mo 4
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -456,6 +474,24 @@
             >;
 
             display-name = "browsernav";
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        layer_7 {
+            bindings = <
+// LA0    LA1           LA2           LA3           LA4           LA5           | MA |   RA0     RA1     RA2     RA3     RA4     RA5
+&trans  &kp LA(N1)    &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LC0              LC1           LC2           LC3           LC4           LC5           | MC |   RC0     RC1     RC2     RC3     RC4     RC5
+&app_sw_enter  &kp LA(N1)    &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            display-name = "re2layer";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
     };
