@@ -461,7 +461,7 @@ rect.held, rect.combo.held {
 <g transform="translate(672, 147)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">&amp;td_j</text>
+<text x="0" y="-4" class="key tap">J</text>
 </g>
 <g transform="translate(728, 140)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -630,11 +630,14 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M252,200 l-37,-2" class="combo"/>
-<path d="M252,200 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="238" y="186" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
+<a href="#vimnav">
+<text x="700" y="144" class="combo tap layer-activator">vimnav</text>
+</a></g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="266" y="190" width="28" height="26" class="combo"/>
 <a href="#browsernav">
-<text x="252" y="200" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
+<text x="280" y="203" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
 </a></g>
 </g>
 </g>
@@ -827,15 +830,15 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <use href="#mdi:arrow-left-bold" xlink:href="#mdi:arrow-left-bold" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:arrow-left-bold"/>
 </g>
-<g transform="translate(672, 147)" class="key keypos-34">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:arrow-down-bold" xlink:href="#mdi:arrow-down-bold" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:arrow-down-bold"/>
+<g transform="translate(672, 147)" class="key held alternate keypos-34">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held alternate side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key held alternate"/>
+<use href="#mdi:arrow-down-bold" xlink:href="#mdi:arrow-down-bold" x="-9" y="-13" height="18" width="18.0" class="key held alternate tap glyph mdi:arrow-down-bold"/>
 </g>
-<g transform="translate(728, 140)" class="key keypos-35">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:arrow-up-bold" xlink:href="#mdi:arrow-up-bold" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:arrow-up-bold"/>
+<g transform="translate(728, 140)" class="key held alternate keypos-35">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held alternate side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key held alternate"/>
+<use href="#mdi:arrow-up-bold" xlink:href="#mdi:arrow-up-bold" x="-9" y="-13" height="18" width="18.0" class="key held alternate tap glyph mdi:arrow-up-bold"/>
 </g>
 <g transform="translate(784, 147)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
@@ -983,11 +986,14 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M252,200 l-37,-2" class="combo"/>
-<path d="M252,200 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="238" y="186" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
+<a href="#vimnav">
+<text x="700" y="144" class="combo tap layer-activator">vimnav</text>
+</a></g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="266" y="190" width="28" height="26" class="combo"/>
 <a href="#browsernav">
-<text x="252" y="200" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
+<text x="280" y="203" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
 </a></g>
 </g>
 </g>
@@ -1336,11 +1342,14 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M252,200 l-37,-2" class="combo"/>
-<path d="M252,200 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="238" y="186" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
+<a href="#vimnav">
+<text x="700" y="144" class="combo tap layer-activator">vimnav</text>
+</a></g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="266" y="190" width="28" height="26" class="combo"/>
 <a href="#browsernav">
-<text x="252" y="200" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
+<text x="280" y="203" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
 </a></g>
 </g>
 </g>
@@ -1676,11 +1685,14 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M252,200 l-37,-2" class="combo"/>
-<path d="M252,200 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="238" y="186" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
+<a href="#vimnav">
+<text x="700" y="144" class="combo tap layer-activator">vimnav</text>
+</a></g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="266" y="190" width="28" height="26" class="combo"/>
 <a href="#browsernav">
-<text x="252" y="200" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
+<text x="280" y="203" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
 </a></g>
 </g>
 </g>
@@ -2016,11 +2028,14 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M252,200 l-37,-2" class="combo"/>
-<path d="M252,200 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="238" y="186" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
+<a href="#vimnav">
+<text x="700" y="144" class="combo tap layer-activator">vimnav</text>
+</a></g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="266" y="190" width="28" height="26" class="combo"/>
 <a href="#browsernav">
-<text x="252" y="200" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
+<text x="280" y="203" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
 </a></g>
 </g>
 </g>
@@ -2353,11 +2368,14 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M252,200 l-37,-2" class="combo"/>
-<path d="M252,200 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="238" y="186" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
+<a href="#vimnav">
+<text x="700" y="144" class="combo tap layer-activator">vimnav</text>
+</a></g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="266" y="190" width="28" height="26" class="combo"/>
 <a href="#browsernav">
-<text x="252" y="200" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
+<text x="280" y="203" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
 </a></g>
 </g>
 </g>
@@ -2574,14 +2592,14 @@ rect.held, rect.combo.held {
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g transform="translate(196, 196)" class="key held keypos-42">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key held"/>
-</g>
-<g transform="translate(252, 203)" class="key trans keypos-43">
+<g transform="translate(196, 196)" class="key trans keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-9" y="-13" height="18" width="18.0" class="key trans tap glyph mdi:transfer"/>
+</g>
+<g transform="translate(252, 203)" class="key held keypos-43">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key held"/>
 </g>
 <g transform="translate(308, 203)" class="key held keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held side"/>
@@ -2688,11 +2706,14 @@ rect.held, rect.combo.held {
 <text x="103" y="161" class="combo tap"><tspan style="font-size: 67%">&amp;soft_off</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M252,200 l-37,-2" class="combo"/>
-<path d="M252,200 l37,2" class="combo"/>
-<rect rx="6" ry="6" x="238" y="186" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="686" y="130" width="28" height="26" class="combo"/>
+<a href="#vimnav">
+<text x="700" y="144" class="combo tap layer-activator">vimnav</text>
+</a></g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="266" y="190" width="28" height="26" class="combo"/>
 <a href="#browsernav">
-<text x="252" y="200" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
+<text x="280" y="203" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
 </a></g>
 </g>
 </g>

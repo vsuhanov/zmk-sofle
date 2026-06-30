@@ -35,7 +35,7 @@ layers:
   - {t: G, h: winmgmt}
   - $$mdi:arrow-left-bold$$
   - H
-  - '&td_j'
+  - J
   - K
   - L
   - {t: ;, s: ':'}
@@ -100,8 +100,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
+  - {t: '$$mdi:arrow-down-bold$$', type: held alternate}
+  - {t: '$$mdi:arrow-up-bold$$', type: held alternate}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -433,8 +433,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -458,5 +458,7 @@ layers:
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
-- p: [42, 44]
+- p: [34, 35]
+  k: vimnav
+- p: [43, 44]
   k: browsernav
