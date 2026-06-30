@@ -1,5 +1,4 @@
 build/
-config/secret_macros.dtsi
 zmk/
 modules/
 tools/
