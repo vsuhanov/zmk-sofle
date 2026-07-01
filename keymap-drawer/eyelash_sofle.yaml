@@ -39,7 +39,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
+  - APOS =kj
   - '&td_lshft'
   - {t: Z, h: '$$mdi:apple-keyboard-control$$'}
   - X
@@ -154,7 +154,7 @@ layers:
   - ^
   - (
   - )
-  - {t: '-', s: F11}
+  - {t: +, s: F11}
   - {t: '=', s: F12}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -167,7 +167,7 @@ layers:
   - _
   - '{'
   - '}'
-  - +
+  - {t: '-', s: _}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
