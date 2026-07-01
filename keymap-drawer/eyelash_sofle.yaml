@@ -2,9 +2,9 @@ layout: {zmk_keyboard: eyelash_sofle}
 layers:
   main:
   - {t: '`', s: '$$mdi:keyboard-tab$$'}
-  - '!'
-  - '@'
-  - '#'
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
   - $
   - '%'
   - $$mdi:arrow-up-bold$$
