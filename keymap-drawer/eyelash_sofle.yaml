@@ -39,7 +39,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - APOS =kj
+  - {t: '''', s: '"'}
   - '&td_lshft'
   - {t: Z, h: '$$mdi:apple-keyboard-control$$'}
   - X
