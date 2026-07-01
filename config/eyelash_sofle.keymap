@@ -239,7 +239,7 @@
         sym_o: sym_o {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp F11>;
+            bindings = <&kp PLUS>, <&kp F11>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
@@ -359,6 +359,7 @@
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp LBKT
 // LC0        LC1        LC2           LC3           LC4     LC5          | MC |           RC0        RC1        RC2        RC3              RC4         RC5
 &lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &lt 3 G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
+=kj
 // LD0        LD1        LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
 &td_lshft   &mt_tp LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
 // LE0        LE1        LE2           LE3           LE4     LE5          | ME |           RE0       RE1        RE2           RE3           RE4
@@ -394,7 +395,7 @@
 // LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0          RB1        RB2        RB3      RB4      RB5
 &none   &none   &none   &none   &none   &none     &none   &kp CARET    &kp LPAR   &kp RPAR   &sym_o   &sym_p   &kp RBKT
 // LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0          RC1        RC2        RC3     RC4     RC5
-&trans   &none   &none   &none   &none   &none     &none   &kp UNDER        &kp LBRC   &kp RBRC   &kp PLUS   &none   &kp BSLH
+&trans   &none   &none   &none   &none   &none     &none   &kp UNDER        &kp LBRC   &kp RBRC   &kp MINUS   &none   &kp BSLH
 // LD0     LD1     LD2     LD3     LD4     LD5     | MD |   RD0          RD1        RD2        RD3     RD4     RD5
 &trans  &none   &none   &none   &none   &none     &none   &kp AMPS        &kp LBKT   &kp RBKT   &none   &none   &trans
 // LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
