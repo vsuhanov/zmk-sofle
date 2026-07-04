@@ -211,14 +211,14 @@
         fk9: fk9 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp F9>;
+            bindings = <&kp N9>, <&kp F9>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         fk10: fk10 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RPAR>, <&kp F10>;
+            bindings = <&kp N0>, <&kp F10>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
