@@ -76,8 +76,8 @@ layers:
   - {t: ^, s: F6}
   - {t: '&', s: F7}
   - {t: '*', s: F8}
-  - {t: (, s: F9}
-  - {t: ), s: F10}
+  - {t: '9', s: F9}
+  - {t: '0', s: F10}
   - {t: 'Alt+$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -141,8 +141,8 @@ layers:
   - {t: ^, s: F6}
   - {t: '&', s: F7}
   - {t: '*', s: F8}
-  - {t: (, s: F9}
-  - {t: ), s: F10}
+  - {t: '9', s: F9}
+  - {t: '0', s: F10}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
