@@ -79,7 +79,7 @@ layers:
   - {t: '9', s: F9}
   - {t: '0', s: F10}
   - {t: 'Alt+$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&app_sw_enter'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Alt+$$mdi:arrow-right-bold$$
   - END
