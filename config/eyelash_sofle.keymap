@@ -316,7 +316,7 @@
 
         numrow_on_combo {
             bindings = <&to 8>;
-            key-positions = <46 47>;
+            key-positions = <47 48>;
             layers = <0>;
             timeout-ms = <100>;
             require-prior-idle-ms = <200>;
@@ -324,7 +324,7 @@
 
         numrow_off_combo {
             bindings = <&to 0>;
-            key-positions = <46 47>;
+            key-positions = <47 48>;
             layers = <8>;
             timeout-ms = <100>;
             require-prior-idle-ms = <200>;
