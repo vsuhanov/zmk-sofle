@@ -411,9 +411,9 @@
 // LA0    LA1           LA2     LA3     LA4     LA5     | MA |   RA0        RA1     RA2     RA3     RA4        RA5
 &app_sw_enter   &fk1   &fk2   &fk3   &fk4   &fk5     &none   &fk6   &fk7   &fk8   &fk9   &fk10   &kp LA(BACKSPACE)
 // LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0        RB1     RB2     RB3    RB4    RB5
-&app_sw_enter   &none   &kp LA(RIGHT)   &kp END   &none   &none     &none   &kp LG(C)  &kp LG(Z)   &kp HOME   &vn_o   &vn_p  &kp RBKT
+&app_sw_enter   &none   &kp LA(RIGHT)   &kp LCTRL(E)   &none   &none     &none   &kp LG(C)  &kp LG(Z)   &kp HOME   &vn_o   &vn_p  &kp RBKT
 // LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0        RC1      RC2     RC3     RC4     RC5
-&trans   &kp HOME   &kp LA(SPACE)   &kp DEL   &none   &none     &none   &kp LEFT   &kp DOWN &kp UP  &kp RIGHT &none  &none
+&trans   &kp LCTRL(A)   &kp LA(SPACE)   &kp DEL   &none   &none     &none   &kp LEFT   &kp DOWN &kp UP  &kp RIGHT &none  &none
 // LD0     LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &none   &none   &none   &none   &kp LA(LEFT)     &none   &none   &none   &none   &none   &none   &trans
 // LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
