@@ -641,10 +641,10 @@ rect.held, rect.combo.held {
 <text x="280" y="203" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
 </a></g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="630" y="190" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="686" y="186" width="28" height="26" class="combo"/>
 <a href="#numrow">
-<text x="644" y="203" class="combo tap layer-activator">numrow</text>
-</a><text x="644" y="214" class="combo hold">toggle</text>
+<text x="700" y="200" class="combo tap layer-activator">numrow</text>
+</a><text x="700" y="210" class="combo hold">toggle</text>
 </g>
 </g>
 </g>
@@ -3430,10 +3430,10 @@ rect.held, rect.combo.held {
 <text x="280" y="203" class="combo tap layer-activator"><tspan style="font-size: 60%">browsernav</tspan></text>
 </a></g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="630" y="190" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="686" y="186" width="28" height="26" class="combo"/>
 <a href="#main">
-<text x="644" y="203" class="combo tap layer-activator">main</text>
-</a><text x="644" y="214" class="combo hold">toggle</text>
+<text x="700" y="200" class="combo tap layer-activator">main</text>
+</a><text x="700" y="210" class="combo hold">toggle</text>
 </g>
 </g>
 </g>

@@ -592,9 +592,9 @@ combos:
   k: vimnav
 - p: [43, 44]
   k: browsernav
-- p: [46, 47]
+- p: [47, 48]
   k: {t: numrow, h: toggle}
   l: [main]
-- p: [46, 47]
+- p: [47, 48]
   k: {t: main, h: toggle}
   l: [numrow]
