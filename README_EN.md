@@ -25,6 +25,14 @@ The keyboard now supports key remapping via DYA STUDIO. Chinese users should con
 
 For 3D printed model files or any issues and malfunctions with the keyboard, please contact [380465425@qq.com](mailto:380465425@qq.com)
 
+## Keymap Development
+
+After editing `config/eyelash_sofle.keymap`, run the following to realign the row label comments with their bindings:
+
+```
+python3 align_comments.py
+```
+
 ## Sofle Keymap
 
 ![Sofle键位图](keymap-drawer/eyelash_sofle.svg)

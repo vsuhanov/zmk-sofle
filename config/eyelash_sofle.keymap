@@ -390,15 +390,15 @@
 
         layer0 {
             bindings = <
-// LA0          LA1        LA2           LA3           LA4     LA5          | MA |           RA0        RA1        RA2        RA3              RA4         RA5
+// LA0       LA1        LA2           LA3           LA4     LA5       | MA |           RA0     RA1      RA2     RA3              RA4          RA5
 &grave_ctrl  &kp N1     &kp N2        &kp N3        &kp N4  &kp N5    &kp UP_ARROW     &kp N6  &kp N7   &kp N8  &minus_nine      &equal_zero  &kp BACKSPACE
-// LB0        LB1        LB2           LB3           LB4     LB5          | MB |           RB0        RB1        RB2        RB3              RB4         RB5
+// LB0      LB1        LB2           LB3           LB4     LB5          | MB |           RB0        RB1        RB2        RB3              RB4         RB5
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp LBKT
-// LC0        LC1        LC2           LC3           LC4     LC5          | MC |           RC0        RC1        RC2        RC3              RC4         RC5
+// LC0        LC1        LC2           LC3           LC4      LC5            | MC |           RC0        RC1        RC2        RC3              RC4         RC5
 &lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &lt 3 G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
-// LD0        LD1        LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
+// LD0      LD1                 LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
 &td_lshft   &mt_tp LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
-// LE0        LE1        LE2           LE3           LE4     LE5          | ME |           RE0       RE1        RE2           RE3           RE4
+// LE0      LE1        LE2            LE3             LE4     LE5                      | ME |           RE0                    RE1             RE2       RE3           RE4
 &kp C_MUTE  &sk LCTRL  &mt LALT PLUS  &mt LGUI MINUS  &mo 1   &space_mod LGUI SPACE    &kp ENTER        &space_mod LALT SPACE  &lt_tp 7 SPACE  &kp RGUI  &kp RALT      &mo 4
             >;
 
@@ -408,15 +408,15 @@
 
         layer_1 {
             bindings = <
-// LA0    LA1           LA2     LA3     LA4     LA5     | MA |   RA0        RA1     RA2     RA3     RA4        RA5
+// LA0          LA1    LA2    LA3    LA4    LA5      | MA |  RA0    RA1    RA2    RA3    RA4     RA5
 &app_sw_enter   &fk1   &fk2   &fk3   &fk4   &fk5     &none   &fk6   &fk7   &fk8   &fk9   &fk10   &kp LA(BACKSPACE)
-// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0        RB1     RB2     RB3    RB4    RB5
+// LB0          LB1     LB2             LB3         LB4     LB5       | MB |  RB0        RB1         RB2        RB3     RB4    RB5
 &app_sw_enter   &none   &kp LA(RIGHT)   &kp LC(E)   &none   &none     &none   &kp LG(C)  &kp LG(Z)   &kp HOME   &vn_o   &vn_p  &kp RBKT
-// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0        RC1      RC2     RC3     RC4     RC5
+// LC0   LC1         LC2             LC3       LC4     LC5       | MC |  RC0        RC1      RC2     RC3       RC4    RC5
 &trans   &kp LC(A)   &kp LA(SPACE)   &kp DEL   &none   &none     &none   &kp LEFT   &kp DOWN &kp UP  &kp RIGHT &none  &none
-// LD0     LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
+// LD0  LD1     LD2     LD3     LD4     LD5              | MD |  RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &none   &none   &none   &none   &kp LA(LEFT)     &none   &none   &none   &none   &none   &none   &trans
-// LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
+// LE0  LE1      LE2      LE3      LE4     LE5               | ME |  RE0             RE1     RE2      RE3      RE4
 &none   &trans   &trans   &trans   &none   &kp LG(SPACE)     &none   &kp LA(SPACE)   &none   &trans   &trans   &none
             >;
 
@@ -426,15 +426,15 @@
 
         layer_2 {
             bindings = <
-// LA0    LA1     LA2     LA3     LA4     LA5     | MA |   RA0          RA1        RA2        RA3     RA4     RA5
+// LA0  LA1    LA2    LA3    LA4    LA5      | MA |  RA0    RA1    RA2    RA3    RA4     RA5
 &none   &fk1   &fk2   &fk3   &fk4   &fk5     &none   &fk6   &fk7   &fk8   &fk9   &fk10   &trans
-// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0          RB1        RB2        RB3      RB4      RB5
+// LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0          RB1        RB2        RB3      RB4      RB5
 &none   &none   &none   &none   &none   &none     &none   &kp CARET    &kp LPAR   &kp RPAR   &sym_o   &sym_p   &kp RBKT
-// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0          RC1        RC2        RC3     RC4     RC5
+// LC0   LC1     LC2     LC3     LC4     LC5       | MC |  RC0              RC1        RC2        RC3        RC4     RC5
 &trans   &none   &none   &none   &none   &none     &none   &kp UNDER        &kp LBRC   &kp RBRC   &em_dash   &none   &kp BSLH
-// LD0     LD1     LD2     LD3     LD4     LD5     | MD |   RD0          RD1        RD2        RD3     RD4     RD5
+// LD0  LD1     LD2     LD3     LD4     LD5       | MD |  RD0             RD1        RD2        RD3     RD4     RD5
 &trans  &none   &none   &none   &none   &none     &none   &kp AMPS        &kp LBKT   &kp RBKT   &none   &none   &trans
-// LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
+// LE0  LE1      LE2      LE3      LE4     LE5       | ME |  RE0     RE1     RE2      RE3      RE4
 &none   &trans   &trans   &trans   &none   &none     &none   &none   &none   &trans   &trans   &none
             >;
 
@@ -444,15 +444,15 @@
 
         layer_3 {
             bindings = <
-// LA0    LA1     LA2     LA3     LA4     LA5     | MA |   RA0     RA1     RA2     RA3     RA4     RA5
+// LA0  LA1          LA2     LA3     LA4     LA5       | MA |  RA0     RA1     RA2     RA3     RA4     RA5
 &trans  &bootloader  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
+// LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0       RC1       RC2     RC3        RC4     RC5
+// LC0  LC1     LC2     LC3     LC4     LC5       | MC |  RC0       RC1       RC2     RC3        RC4     RC5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &wm_left  &wm_down  &wm_up  &wm_right  &trans  &trans
-// LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
+// LD0  LD1     LD2     LD3     LD4     LD5       | MD |  RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
+// LE0  LE1     LE2     LE3     LE4     LE5       | ME |  RE0     RE1     RE2     RE3     RE4
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
@@ -462,15 +462,15 @@
 
         layer_4 {
             bindings = <
-// LA0    LA1            LA2            LA3            LA4            LA5     | MA |   RA0     RA1     RA2     RA3     RA4     RA5
+// LA0  LA1            LA2            LA3            LA4            LA5       | MA |  RA0     RA1     RA2     RA3     RA4     RA5
 &trans  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &bootloader
-// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
+// LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0     RC1     RC2     RC3     RC4     RC5
+// LC0  LC1     LC2     LC3     LC4     LC5       | MC |  RC0     RC1     RC2     RC3     RC4     RC5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
+// LD0  LD1     LD2     LD3     LD4     LD5       | MD |  RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
+// LE0  LE1     LE2     LE3     LE4     LE5       | ME |  RE0     RE1     RE2     RE3     RE4
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
@@ -480,15 +480,15 @@
 
         layer_5 {
             bindings = <
-// LA0        LA1     LA2     LA3     LA4     LA5     | MA |   RA0     RA1     RA2     RA3     RA4     RA5
+// LA0      LA1     LA2     LA3     LA4     LA5       | MA |  RA0     RA1     RA2     RA3     RA4     RA5
 &kp TAB     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
+// LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LC0              LC1     LC2     LC3     LC4     LC5     | MC |   RC0        RC1        RC2      RC3        RC4     RC5
+// LC0          LC1     LC2     LC3     LC4     LC5       | MC |  RC0        RC1        RC2      RC3        RC4     RC5
 &app_sw_cancel  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT  &trans  &trans
-// LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
+// LD0  LD1     LD2     LD3     LD4     LD5       | MD |  RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &app_sw_confirm
-// LE0    LE1     LE2     LE3               LE4     LE5               RE0               RE1     RE2     RE3     RE4     RE5
+// LE0  LE1     LE2     LE3              LE4     LE5                | ME |           RE0     RE1     RE2     RE3     RE4
 &trans  &trans  &trans  &app_sw_confirm  &trans  &app_sw_confirm    &app_sw_confirm  &trans  &trans  &trans  &trans  &trans
             >;
 
@@ -498,15 +498,15 @@
 
         layer_6 {
             bindings = <
-// LA0    LA1     LA2     LA3     LA4     LA5     | MA |   RA0     RA1     RA2     RA3     RA4     RA5
+// LA0  LA1     LA2     LA3     LA4     LA5       | MA |  RA0     RA1     RA2     RA3     RA4     RA5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
+// LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0                  RC1                  RC2             RC3             RC4     RC5
+// LC0  LC1     LC2     LC3     LC4     LC5       | MC |  RC0              RC1          RC2              RC3          RC4     RC5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LC(LS(TAB))  &kp LC(TAB)  &kp LC(LS(TAB))  &kp LC(TAB)  &trans  &trans
-// LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
+// LD0  LD1     LD2     LD3     LD4     LD5       | MD |  RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
+// LE0  LE1     LE2     LE3     LE4     LE5       | ME |  RE0     RE1     RE2     RE3     RE4
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
@@ -516,15 +516,15 @@
 
         layer_7 {
             bindings = <
-// LA0              LA1           LA2           LA3           LA4           LA5           | MA |   RA0     RA1     RA2     RA3     RA4     RA5
-&app_sw_enter  &kp LA(N1)    &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LB0              LB1     LB2     LB3     LB4     LB5                              | MB |   RB0     RB1                              RB2                              RB3                              RB4     RB5
+// LA0         LA1           LA2           LA3           LA4           LA5             | MA |  RA0             RA1             RA2     RA3     RA4     RA5
+&app_sw_enter  &kp LA(N1)    &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)      &trans  &kp LG(LS(N3))  &kp LG(LS(N4))  &trans  &trans  &trans  &trans
+// LB0         LB1     LB2     LB3     LB4     LB5                        | MB |  RB0     RB1     RB2                    RB3                    RB4     RB5
 &app_sw_enter  &trans  &trans  &trans  &trans  &kp LS(LA(LC(LG(T))))      &trans  &trans  &trans  &kp LS(LA(LC(LG(I))))  &kp LS(LA(LC(LG(O))))  &trans  &trans
-// LC0              LC1           LC2           LC3           LC4           LC5           | MC |   RC0     RC1     RC2     RC3     RC4     RC5
+// LC0         LC1           LC2           LC3           LC4           LC5             | MC |  RC0     RC1     RC2     RC3     RC4     RC5
 &app_sw_enter  &kp LA(N1)    &kp LA(N2)    &kp LA(N3)    &kp LA(N4)    &kp LA(N5)      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
+// LD0  LD1     LD2     LD3     LD4     LD5         | MD |  RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
+// LE0  LE1     LE2     LE3     LE4     LE5         | ME |  RE0     RE1     RE2     RE3     RE4
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
@@ -534,15 +534,15 @@
 
         layer_8 {
             bindings = <
-// LA0          LA1        LA2        LA3        LA4        LA5        | MA |           RA0        RA1        RA2        RA3        RA4        RA5
+// LA0       LA1        LA2        LA3        LA4        LA5        | MA |           RA0        RA1        RA2        RA3        RA4        RA5
 &grave_ctrl  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BACKSPACE
-// LB0    LB1     LB2     LB3     LB4     LB5     | MB |   RB0     RB1     RB2     RB3     RB4     RB5
+// LB0  LB1     LB2     LB3     LB4     LB5        | MB |  RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LC0    LC1     LC2     LC3     LC4     LC5     | MC |   RC0     RC1     RC2     RC3     RC4     RC5
+// LC0  LC1     LC2     LC3     LC4     LC5        | MC |  RC0     RC1     RC2     RC3     RC4     RC5
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LD0    LD1     LD2     LD3     LD4     LD5     | MD |   RD0     RD1     RD2     RD3     RD4     RD5
+// LD0  LD1     LD2     LD3     LD4     LD5        | MD |  RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LE0    LE1     LE2     LE3     LE4     LE5     | ME |   RE0     RE1     RE2     RE3     RE4
+// LE0  LE1     LE2     LE3     LE4     LE5        | ME |  RE0     RE1     RE2     RE3     RE4
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
