@@ -342,7 +342,7 @@
                 <&macro_tap>,
                 <&kp TAB>,
                 <&macro_tap>,
-                <&tog APP_SW>;
+                <&to APP_SW>;
         };
 
         app_sw_confirm: app_sw_confirm {
@@ -354,7 +354,7 @@
                 <&macro_tap>,
                 <&kp ENTER>,
                 <&macro_tap>,
-                <&tog APP_SW>;
+                <&to 0>;
         };
 
         app_sw_cancel: app_sw_cancel {
@@ -366,7 +366,7 @@
                 <&macro_tap>,
                 <&kp ESC>,
                 <&macro_tap>,
-                <&tog APP_SW>;
+                <&to 0>;
         };
 
         SHIFT_MCLK: SHIFT_MCLK {
