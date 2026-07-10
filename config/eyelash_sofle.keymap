@@ -398,8 +398,8 @@
 &lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &lt 3 G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 // LD0      LD1                 LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
 &td_lshft   &mt_tp LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
-// LE0      LE1        LE2            LE3             LE4     LE5                      | ME |           RE0                    RE1             RE2       RE3           RE4
-&kp C_MUTE  &sk LCTRL  &mt LALT PLUS  &mt LGUI MINUS  &mo 1   &space_mod LGUI SPACE    &kp ENTER        &space_mod LALT SPACE  &lt_tp 7 SPACE  &kp RGUI  &kp RALT      &mo 4
+// LE0      LE1       LE2        LE3       LE4                LE5                      | ME |           RE0                    RE1             RE2       RE3           RE4
+&kp C_MUTE  &mo 1     &sk LCTRL  &kp LALT  &mt LGUI MINUS     &space_mod LGUI SPACE    &kp ENTER        &space_mod LALT SPACE  &lt_tp 7 SPACE  &kp RGUI  &kp RALT      &mo 4
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
