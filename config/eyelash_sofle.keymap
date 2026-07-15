@@ -498,8 +498,8 @@
 
         layer_6 {
             bindings = <
-// LA0  LA1     LA2     LA3     LA4     LA5       | MA |  RA0     RA1     RA2     RA3     RA4     RA5
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LA0  LA1          LA2          LA3          LA4          LA5            | MA |  RA0          RA1          RA2          RA3          RA4          RA5
+&trans  &kp LG(N1)   &kp LG(N2)   &kp LG(N3)   &kp LG(N4)   &kp LG(N5)   &trans  &kp LG(N6)   &kp LG(N7)   &kp LG(N8)   &kp LG(N9)   &kp LG(N0)   &trans
 // LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LC0  LC1     LC2     LC3     LC4     LC5       | MC |  RC0              RC1          RC2              RC3          RC4     RC5
