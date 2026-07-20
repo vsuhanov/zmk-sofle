@@ -11,8 +11,8 @@ layers:
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
-  - {t: '-', s: '9'}
-  - {t: '=', s: '0'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
   - Q
@@ -51,7 +51,7 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - {t: /, h: '$$mdi:apple-keyboard-control$$', s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:volume-off$$
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
@@ -141,8 +141,8 @@ layers:
   - {t: ^, s: F6}
   - {t: '&', s: F7}
   - {t: '*', s: F8}
-  - {t: '9', s: F9}
-  - {t: '0', s: F10}
+  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -398,11 +398,11 @@ layers:
   - {t: Gui+4, s: Gui+$}
   - {t: Gui+5, s: Gui+%}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Gui+6, s: Gui+^}
-  - {t: Gui+7, s: Gui+&}
-  - {t: Gui+8, s: Gui+*}
+  - {t: Gui+1, s: Gui+!}
+  - {t: Gui+2, s: Gui+@}
+  - {t: Gui+3, s: Gui+#}
+  - {t: Gui+4, s: Gui+$}
   - {t: Gui+9, s: Gui+(}
-  - {t: Gui+0, s: Gui+)}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -520,71 +520,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  numrow:
-  - {t: '`', s: '$$mdi:keyboard-tab$$'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - $$mdi:arrow-up-bold$$
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
@@ -592,9 +527,3 @@ combos:
   k: vimnav
 - p: [43, 44]
   k: browsernav
-- p: [47, 48]
-  k: {t: numrow, h: toggle}
-  l: [main]
-- p: [47, 48]
-  k: {t: main, h: toggle}
-  l: [numrow]
