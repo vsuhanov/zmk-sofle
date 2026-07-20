@@ -275,19 +275,6 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        minus_nine: minus_nine {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp N9>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        equal_zero: equal_zero {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp N0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     combos {
@@ -314,21 +301,6 @@
             slow-release;
         };
 
-        numrow_on_combo {
-            bindings = <&to 8>;
-            key-positions = <47 48>;
-            layers = <0>;
-            timeout-ms = <100>;
-            require-prior-idle-ms = <200>;
-        };
-
-        numrow_off_combo {
-            bindings = <&to 0>;
-            key-positions = <47 48>;
-            layers = <8>;
-            timeout-ms = <100>;
-            require-prior-idle-ms = <200>;
-        };
     };
 
     macros {
@@ -391,13 +363,13 @@
         layer0 {
             bindings = <
 // LA0       LA1        LA2           LA3           LA4     LA5       | MA |           RA0     RA1      RA2     RA3              RA4          RA5
-&grave_ctrl  &kp N1     &kp N2        &kp N3        &kp N4  &kp N5    &kp UP_ARROW     &kp N6  &kp N7   &kp N8  &minus_nine      &equal_zero  &kp BACKSPACE
+&grave_ctrl  &kp N1     &kp N2        &kp N3        &kp N4  &kp N5    &kp UP_ARROW     &kp N6  &kp N7   &kp N8  &kp N9           &kp N0       &kp BACKSPACE
 // LB0      LB1        LB2           LB3           LB4     LB5          | MB |           RB0        RB1        RB2        RB3              RB4         RB5
 &kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp LBKT
 // LC0        LC1        LC2           LC3           LC4      LC5            | MC |           RC0        RC1        RC2        RC3              RC4         RC5
 &lc0_morph    &kp A      &kp S         &lt 2 D       &lt 1 F  &lt 3 G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
 // LD0      LD1                 LD2           LD3           LD4     LD5          | MD |           RD0        RD1        RD2        RD3              RD4         RD5
-&td_lshft   &mt_tp LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &mt LSHFT ENTER
+&td_lshft   &mt_tp LCTRL Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &mt_tp LCTRL FSLH    &mt LSHFT ENTER
 // LE0      LE1           LE2        LE3       LE4                LE5                      | ME |           RE0                    RE1             RE2       RE3           RE4
 &kp C_MUTE  &sk LCTRL     &sk LCTRL  &kp LALT  &mt LGUI MINUS     &space_mod LGUI SPACE    &kp ENTER        &space_mod LALT SPACE  &lt_tp 7 SPACE  &kp RGUI  &kp RALT      &mo 4
             >;
@@ -426,8 +398,8 @@
 
         layer_2 {
             bindings = <
-// LA0  LA1    LA2    LA3    LA4    LA5      | MA |  RA0    RA1    RA2    RA3    RA4     RA5
-&none   &fk1   &fk2   &fk3   &fk4   &fk5     &none   &fk6   &fk7   &fk8   &fk9   &fk10   &trans
+// LA0  LA1    LA2    LA3    LA4    LA5      | MA |  RA0    RA1    RA2    RA3         RA4          RA5
+&none   &fk1   &fk2   &fk3   &fk4   &fk5     &none   &fk6   &fk7   &fk8   &kp MINUS   &kp EQUAL    &trans
 // LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0          RB1        RB2        RB3      RB4      RB5
 &none   &none   &none   &none   &none   &none     &none   &kp CARET    &kp LPAR   &kp RPAR   &sym_o   &sym_p   &kp RBKT
 // LC0   LC1     LC2     LC3     LC4     LC5       | MC |  RC0              RC1        RC2        RC3        RC4     RC5
@@ -499,7 +471,7 @@
         layer_6 {
             bindings = <
 // LA0  LA1          LA2          LA3          LA4          LA5            | MA |  RA0          RA1          RA2          RA3          RA4          RA5
-&trans  &kp LG(N1)   &kp LG(N2)   &kp LG(N3)   &kp LG(N4)   &kp LG(N5)   &trans  &kp LG(N6)   &kp LG(N7)   &kp LG(N8)   &kp LG(N9)   &kp LG(N0)   &trans
+&trans  &kp LG(N1)   &kp LG(N2)   &kp LG(N3)   &kp LG(N4)   &kp LG(N5)   &trans  &kp LG(N1)   &kp LG(N2)   &kp LG(N3)   &kp LG(N4)   &kp LG(N9)   &trans
 // LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LC0  LC1     LC2     LC3     LC4     LC5       | MC |  RC0              RC1          RC2              RC3          RC4     RC5
@@ -532,22 +504,5 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        layer_8 {
-            bindings = <
-// LA0       LA1        LA2        LA3        LA4        LA5        | MA |           RA0        RA1        RA2        RA3        RA4        RA5
-&grave_ctrl  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp BACKSPACE
-// LB0  LB1     LB2     LB3     LB4     LB5        | MB |  RB0     RB1     RB2     RB3     RB4     RB5
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LC0  LC1     LC2     LC3     LC4     LC5        | MC |  RC0     RC1     RC2     RC3     RC4     RC5
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LD0  LD1     LD2     LD3     LD4     LD5        | MD |  RD0     RD1     RD2     RD3     RD4     RD5
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LE0  LE1     LE2     LE3     LE4     LE5        | ME |  RE0     RE1     RE2     RE3     RE4
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            display-name = "numrow";
-            sensor-bindings = <&rsr_vol &rsr_trans>;
-        };
     };
 };
