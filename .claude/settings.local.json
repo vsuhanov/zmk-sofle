@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(gh run:*)"
+      "Bash(gh run:*)",
+      "Bash(grep -n \"macros {\\\\|compatible = \\\\\"zmk,behavior-macro\\\\\"\" /Users/vitaly/projects/zmk-sofle/config/eyelash_sofle.keymap)",
+      "Bash(awk '/layer_5|APP_SW|layer5/{print NR\": \"$0}' /Users/vitaly/projects/zmk-sofle/config/eyelash_sofle.keymap)",
+      "Bash(sed -n '/layer_5 {/,/display-name/p' /Users/vitaly/projects/zmk-sofle/config/eyelash_sofle.keymap)"
     ]
   }
 }
