@@ -62,13 +62,6 @@
             keep-mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        grave_alt: grave_alt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&grave_cmd>, <&kp LG(TAB)>;
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-
         shift_ctrl: shift_ctrl {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -89,7 +82,7 @@
         grave_ctrl: grave_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&grave_alt>, <&kp TAB>;
+            bindings = <&grave_cmd>, <&kp TAB>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL|MOD_RCTL)>;
         };
