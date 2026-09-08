@@ -94,7 +94,7 @@ layers:
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+A
-  - GLOBE
+  - '&alt_space'
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
