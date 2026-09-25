@@ -1,6 +1,8 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
 #define APP_SW 5
+#define FACTORIO 8
+#define FNUM 9
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -454,8 +456,8 @@
 &trans  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &bootloader
 // LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0     RB1     RB2     RB3     RB4     RB5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-// LC0  LC1     LC2     LC3     LC4     LC5       | MC |  RC0     RC1     RC2     RC3     RC4     RC5
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+// LC0  LC1     LC2     LC3     LC4            LC5       | MC |  RC0     RC1     RC2     RC3     RC4     RC5
+&trans  &trans  &trans  &trans  &tog FACTORIO  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LD0  LD1     LD2     LD3     LD4     LD5       | MD |  RD0     RD1     RD2     RD3     RD4     RD5
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 // LE0  LE1     LE2     LE3     LE4     LE5       | ME |  RE0     RE1     RE2     RE3     RE4
@@ -517,6 +519,42 @@
             >;
 
             display-name = "re2layer";
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        layer_8 {
+            bindings = <
+// LA0  LA1     LA2     LA3     LA4     LA5       | MA |  RA0        RA1       RA2       RA3       RA4       RA5
+&to 0   &to 0   &to 0   &to 0   &to 0   &to 0     &to 0   &kp M      &kp N1    &kp N2    &kp N3    &kp N4    &kp N5
+// LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0        RB1       RB2       RB3       RB4       RB5
+&to 0   &to 0   &to 0   &to 0   &to 0   &to 0     &to 0   &kp ENTER  &kp Q     &kp W     &kp E     &kp R     &kp T
+// LC0  LC1     LC2     LC3     LC4     LC5       | MC |  RC0        RC1       RC2       RC3       RC4       RC5
+&to 0   &to 0   &to 0   &to 0   &to 0   &to 0     &to 0   &kp GRAVE  &kp A     &kp S     &kp D     &kp F     &kp ESC
+// LD0  LD1     LD2     LD3     LD4     LD5       | MD |  RD0        RD1       RD2       RD3       RD4       RD5
+&to 0   &to 0   &to 0   &to 0   &to 0   &to 0     &to 0   &kp P      &kp Z     &kp X     &kp C     &kp V     &kp LSHFT
+// LE0  LE1     LE2     LE3     LE4     LE5       | ME |  RE0     RE1        RE2          RE3         RE4
+&to 0   &to 0   &to 0   &to 0   &to 0   &to 0     &to 0   &trans  &sl FNUM   &kp LCTRL    &kp LALT    &trans
+            >;
+
+            display-name = "factorio";
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        layer_9 {
+            bindings = <
+// LA0  LA1     LA2     LA3     LA4     LA5       | MA |  RA0     RA1         RA2         RA3         RA4         RA5
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans      &trans      &trans      &trans
+// LB0  LB1     LB2     LB3     LB4     LB5       | MB |  RB0     RB1         RB2         RB3         RB4         RB5
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp X   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5
+// LC0  LC1     LC2     LC3     LC4     LC5       | MC |  RC0     RC1         RC2         RC3         RC4         RC5
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
+// LD0  LD1     LD2     LD3     LD4     LD5       | MD |  RD0     RD1         RD2         RD3         RD4         RD5
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)
+// LE0  LE1     LE2     LE3     LE4     LE5       | ME |  RE0     RE1     RE2     RE3     RE4
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            display-name = "fnum";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
